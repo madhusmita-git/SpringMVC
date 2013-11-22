@@ -11,13 +11,23 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HomeController {
 
 	@RequestMapping(value="/")
-	public @ResponseBody String getHomeInfo() {
+	@ResponseBody
+	public String getHomeInfo() {
 		return "WELCOME";
 	}
 	
-	@RequestMapping(value="/{path}", method=RequestMethod.GET)
-	public @ResponseBody String getCustomParam(@PathVariable String path, @RequestParam String param1,
+	/**
+	 * getCustomParam
+	 * @param path
+	 * @param param1 (e.g. http://localhost:8080/SpringMVC/test/staff?param2=3&val1=test)
+	 * @param param2
+	 * @return
+	 */
+	@RequestMapping(value="/{type}", method=RequestMethod.GET)
+	@ResponseBody
+	public String getCustomParam(@PathVariable String type, 
+			@RequestParam(required=false, defaultValue="def1", value="val1") String param1,
 			@RequestParam int param2) {
-		return "CustomParam: " + path + " -> " + param1 + " -> " + param2;
+		return "CustomParam: " + type + " -> " + param1 + " -> " + param2;
 	}
 }
