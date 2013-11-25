@@ -14,7 +14,7 @@
   
   <servlet-mapping>
  	<servlet-name>mvc-dispatcher</servlet-name>
-    <url-pattern>/test/*</url-pattern>
+    <url-pattern>/sample/*</url-pattern>
   </servlet-mapping>
 
   <context-param>
