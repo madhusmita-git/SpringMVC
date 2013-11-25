@@ -19,7 +19,7 @@ public class HomeController {
 	/**
 	 * getCustomParam
 	 * @param path
-	 * @param param1 (e.g. http://localhost:8080/SpringMVC/test/staff?param2=3&val1=test)
+	 * @param param1 (e.g. http://localhost:8080/SpringMVC/sample/staff?param2=3&val1=test)
 	 * @param param2
 	 * @return
 	 */
