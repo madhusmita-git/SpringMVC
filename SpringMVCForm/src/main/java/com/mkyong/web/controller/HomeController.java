@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.View;
 
 @Controller
 public class HomeController {
@@ -14,6 +16,11 @@ public class HomeController {
 	@ResponseBody
 	public String getHomeInfo() {
 		return "WELCOME";
+	}
+	
+	@RequestMapping(value="/hello")
+	public ModelAndView getHelloPage() {
+		return new ModelAndView("hello");
 	}
 	
 	/**
