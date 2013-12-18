@@ -1,5 +1,6 @@
 analyseLocally=false
 eclipse.preferences.version=1
+extraProperties=
 projectKey=com.mkyong.common\:SpringMVC
 serverUrl=http\://localhost\:9000
 version=2
